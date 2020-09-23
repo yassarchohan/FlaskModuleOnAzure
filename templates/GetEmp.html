@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Get Employee Information</title>
+</head>
+<center>
+	<font color="black" size="5" style="font-family: avenir">
+
+		<h1 style="color: orange">Employee Information</h1>
+
+		<body bgcolor="grey" background="">
+
+			<form action="http://127.0.0.1/fetchdata" autocomplete="on" method="POST">
+
+				<h2 style="color: grey">Enter Employee First Name</h2>
+
+		  		First Name:<br> <input style="height:25px;font-size:14pt;" type="text" name="first_name" id="fname"><br><br>
+
+		  		<button type="submit" style="background: grey; height: 45px; width: 200px; color: white; size: 5; font:oblique;">Search</button><br><br>
+
+			</form>
+		<table id="finaloutput">
+			{% for row in rows %}
+    <tr>
+        <td>{{ row }}</a></td>
+
+    </tr>
+    {% endfor %}
+		</table>
+		<script>
+		function searching(){
+		var fname = document.getElementById("fname");
+		console.log(fname);
+		var url = "http://127.0.0.1/fetchdata?firstname="+ encodeURI(fname);
+		window.location = url;
+		}
+		</script>
+
+		</body>
+	</font>
+</center>
+</html>
