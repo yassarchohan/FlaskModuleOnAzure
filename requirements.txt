@@ -1,5 +1,10 @@
-flask
-mysql.connector
+click
+Flask
+itsdangerous
+Jinja2
+MarkupSafe
+Werkzeug
+mysql-connector-python
 flask_cors
 flask_restful
 flask_jsonpify
